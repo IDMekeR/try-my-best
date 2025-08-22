@@ -1,23 +1,25 @@
-# Use an official Node runtime as a parent image
-FROM node:14
+# Stage 1: Build React app
+FROM node:18 AS build
 
-# Set the working directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
-
+# Copy dependencies files
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm install --legacy-peer-deps
 
-# Copy the rest of the application code
+# Copy all files
 COPY . .
 
-# Build the application
+# Build the app
 RUN npm run build
 
-# Expose the port the app runs on
-EXPOSE 3000
+# Stage 2: Serve with Nginx
+FROM nginx:alpine
 
-# Define the command to run the app
-CMD ["npm", "start"]
+# Copy build output to Nginx html folder
+COPY --from=build /app/build /usr/share/nginx/html
+
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
