@@ -1,0 +1,201 @@
+.edfViewer {
+    .montage-btn {
+        span {
+            font-size: 18px !important;
+        }
+    }
+    .montageModal {
+        .ant-btn {
+            height: 35px !important;
+
+            span {
+                font-size: 18px !important;
+            }
+        }
+    }
+    .navigationCont {
+        background-color: #f5f1ef;
+        .ant-btn {
+            height: 25px !important;
+            width: 45px !important;
+            background-color: #f5f1ef;
+            border: none !important;
+
+            span {
+                font-size: 22px !important;
+                font-weight: 400 !important;
+            }
+        }
+
+        .stop-btn {
+            span {
+                color: red;
+            }
+        }
+
+        .play-btn {
+            span {
+                color: #0078d7;
+            }
+        }
+    }
+    .ant-dropdown-link {
+        background: white;
+        padding: 6px 10px;
+        border: 0.5px solid #777676;
+        font-size: 1rem;
+        color: black;
+        text-decoration: none;
+    }
+    .header-cont {
+        background-color: #0078d3;
+        color: #dcfdfe;
+        margin-bottom: 0px !important ;
+        .main-title {
+            background-color: #0078d3;
+            left: 46%;
+            color: #dcfdfe;
+        }
+        .logo {
+            width: 180px;
+        }
+    }
+    .patient-detail {
+        top: 6px;
+        right: 0px;
+        z-index: 100;
+        color: #dcfdfe;
+    }
+    .edf-tabs {
+        .ant-tabs-nav-wrap {
+            display: none;
+        }
+        .ant-tabs.ant-tabs-top {
+            .ant-tabs-nav {
+                background-color: #0078d3;
+                margin: 0 0 0px 0 !important;
+            }
+            .ant-tabs-nav-list {
+                .ant-tabs-tab {
+                    padding: 2px 17px !important;
+                    margin: 0px !important;
+                    color: #dcfdfe;
+                }
+                .ant-tabs-tab.ant-tabs-tab-active {
+                    background-color: #f5f1ef;
+                    .ant-tabs-tab-btn {
+                        color: #000000;
+                    }
+                }
+                .ant-tabs-ink-bar.ant-tabs-ink-bar-animated {
+                    background: #f5f1ef !important;
+                }
+            }
+            .ant-tabs-content-holder {
+                background-color: #f5f1ef;
+            }
+        }
+    }
+    .scale-dropdown,
+    .amplitude-dropdown {
+        .navigation {
+            border: 0.5px solid #777676;
+            background-color: #0178d0;
+            color: #e8e8e8;
+            position: absolute;
+            right: -23px;
+            top: -1px;
+            padding: 1px 5px;
+            .anticon.anticon-down {
+                font-size: 12px !important;
+            }
+        }
+    }
+    .title-continer {
+        .title {
+            font-size: 13px;
+        }
+    }
+    .show-container {
+        padding-right: 33px !important;
+        border-right: 0.5px solid #a1a1a1;
+    }
+    .edf-scroller {
+        background: #f5f1ef;
+        padding: 4px 0px;
+        border-bottom: 0.5px solid #d4caca;
+    }
+    .show-artifact {
+        border-right: 0.5px solid #a1a1a1;
+    }
+    .edf-canvas {
+        position: absolute;
+        top: 125px;
+        left: 0px;
+        width: 100%;
+        height: calc(100% - 230px) !important;
+    }
+    @media only screen and (min-width: 1750px) {
+        .patient-detail,
+        .header-cont {
+            .main-title.title-crd {
+                font-size: 20px !important;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1750px) {
+        .patient-detail,
+        .header-cont {
+            .title-crd {
+                font-size: 16px !important;
+            }
+            .main-title.title-crd {
+                font-size: 17px !important;
+            }
+        }
+    }
+    @media only screen and (max-width: 1500px) {
+        .patient-detail,
+        .header-cont {
+            .title-crd {
+                font-size: 14px !important;
+            }
+            .main-title.title-crd {
+                font-size: 16px !important;
+            }
+            .logo {
+                width: 140px !important;
+            }
+        }
+    }
+    @media only screen and (max-width: 1400px) {
+        .patient-detail,
+        .header-cont {
+            .title-crd {
+                font-size: 12px !important;
+            }
+        }
+        .header-cont {
+            height: 50px !important;
+        }
+        .edf-canvas {
+            top: 95px !important;
+            height: calc(100% - 200px) !important;
+        }
+    }
+    @media only screen and (max-width: 1250px) {
+        .patient-detail,
+        .header-cont {
+            .title-crd {
+                font-size: 10px !important;
+            }
+            .main-title.title-crd {
+                font-size: 12px !important;
+            }
+            .logo {
+                width: 120px !important;
+            }
+        }
+    }
+}

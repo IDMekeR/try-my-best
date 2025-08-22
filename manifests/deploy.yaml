@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eeg-ui
+  labels:
+    app: eeg-ui
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: eeg-ui
+  template:
+    metadata:
+      labels:
+        app: eeg-ui
+    spec:
+      containers:
+      - name: eeg-ui-container
+        
+        image: eegdatahubprodregistry.azurecr.io/eeg_ui:$(Build.BuildId)
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+        env:
+        - name: API_URL
+          value: $(API_URL)
+        

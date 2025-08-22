@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Explore our EEG project, featuring innovative solutions and insights in brainwave analysis. Learn about our advanced EEG technology, applications in healthcare, and research contributions."
+        />
+        <meta name="keywords" content="EEG project, brainwave analysis, EEG technology, healthcare applications, neuroscience research, EEG data analysis" />
+        <meta property="og:title" content="EEG Project | Axon EEG Solutions" />
+        <meta
+            property="og:description"
+            content="Discover our EEG project focused on advancing brainwave analysis technology. Learn how our solutions are impacting healthcare and neuroscience research."
+        />
+        <meta property="og:image" content="%PUBLIC_URL%/login-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="EEG Project | Axon EEG Solutions" />
+        <meta
+            name="twitter:description"
+            content="Discover our EEG project focused on advancing brainwave analysis technology. Learn how our solutions are impacting healthcare and neuroscience research."
+        />
+        <meta name="twitter:image" content="https://example.com/eeg-project-thumbnail.jpg" />
+
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
+        <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        <!-- <script src="/env-config.js"></script> -->
+        <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+        <title>EEG Data Hub</title>
+        <style>
+            body {
+                height: 100vh;
+            }
+            .spinnerContainer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                height: 100%;
+            }
+
+            .spinner {
+                width: 56px;
+                height: 56px;
+                display: grid;
+                border: 4px solid #0000;
+                border-radius: 50%;
+                border-right-color: #299fff;
+                animation: tri-spinner 1s infinite linear;
+            }
+
+            .spinner::before,
+            .spinner::after {
+                content: '';
+                grid-area: 1/1;
+                margin: 2px;
+                border: inherit;
+                border-radius: 50%;
+                animation: tri-spinner 2s infinite;
+            }
+
+            .spinner::after {
+                margin: 8px;
+                animation-duration: 3s;
+            }
+
+            @keyframes tri-spinner {
+                100% {
+                    transform: rotate(1turn);
+                }
+            }
+
+            .loader {
+                color: #4a4a4a;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 500;
+                font-size: 25px;
+                -webkit-box-sizing: content-box;
+                box-sizing: content-box;
+                height: 100px;
+                padding: 10px 10px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                border-radius: 8px;
+            }
+
+            .words {
+                overflow: hidden;
+            }
+
+            .word {
+                display: block;
+                height: 100%;
+                padding-left: 6px;
+                padding-top: 27px;
+                color: #299fff;
+                animation: cycle-words 5s infinite;
+            }
+
+            @keyframes cycle-words {
+                10% {
+                    -webkit-transform: translateY(-105%);
+                    transform: translateY(-105%);
+                }
+
+                25% {
+                    -webkit-transform: translateY(-100%);
+                    transform: translateY(-100%);
+                }
+
+                35% {
+                    -webkit-transform: translateY(-205%);
+                    transform: translateY(-205%);
+                }
+
+                50% {
+                    -webkit-transform: translateY(-200%);
+                    transform: translateY(-200%);
+                }
+
+                60% {
+                    -webkit-transform: translateY(-305%);
+                    transform: translateY(-305%);
+                }
+
+                75% {
+                    -webkit-transform: translateY(-300%);
+                    transform: translateY(-300%);
+                }
+
+                85% {
+                    -webkit-transform: translateY(-405%);
+                    transform: translateY(-405%);
+                }
+
+                100% {
+                    -webkit-transform: translateY(-400%);
+                    transform: translateY(-400%);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+        <div id="spinnerContainer" class="spinnerContainer">
+            <div class="spinner"></div>
+            <div class="loader">
+                <p style="padding-bottom: 20px">Our Datahub provides </p>
+                <div class="words">
+                    <span class="word">data Processing and Analysis</span>
+                    <span class="word">visualization and Reporting</span>
+                    <span class="word">advanced Analytics</span>
+                    <span class="word">Compliance and Security</span>
+                    <span class="word">User Interface and Experience</span>
+                </div>
+            </div>
+        </div>
+        <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+      
+    -->
+        <script>
+            window.addEventListener('load', function () {
+                var spinnerContainer = document.getElementById('spinnerContainer');
+                spinnerContainer.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Re-enable scrolling after load
+            });
+        </script>
+    </body>
+</html>

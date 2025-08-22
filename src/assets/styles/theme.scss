@@ -1,0 +1,147 @@
+$primary: #5a53b2;
+
+$secondary: #1f98df;
+$success: #207e56;
+$danger: #e54641;
+$info: #1f98df;
+$warning: #ff8c01;
+
+$header: #edf4ff;
+
+$grid: #216042;
+$gridHeader: #e1e1e1;
+$gridHeaderColor: #152d57;
+$bg-tblHead:#d0daf1 ;
+$bg-tblTxt:#21538f;
+
+$focus: #5a53b2;
+$back: #8b80fa;
+
+$bcolor: #f5f6fb;
+$gray-2: #e4e9f0;
+
+$white: #ffffff;
+$txtcolor: #000;
+$bgpurple: #ecb6ffa3;
+$menulightHeader:#d7e7ffab;
+$menuHeader:#D7E7FF;
+$lightgray:#E1DFDF;
+$lightblue:rgb(246 251 255);
+$tableHead:#e1e1e1;
+$lightprimary:#5a53b226;
+
+
+$fs-10:10px;
+$fs-11:11px;
+$fs-12:12px;
+$fs-13:13px;
+$fs-14:14px;
+$fs-15:15px;
+$fs-16:16px;
+$fs-17:17px;
+$fs-18:18px;
+$fs-19:19px;
+$fs-20:20px;
+
+.fw-600{
+    font-weight: 600;
+}
+.fs-10{
+    font-size: $fs-10;
+}
+.fs-11{
+    font-size: $fs-11;
+}
+.fs-12{
+    font-size: $fs-12;
+}
+.fs-13{
+    font-size: $fs-13;
+}
+.fs-14{
+    font-size: $fs-14;
+}
+.fs-15{
+    font-size: $fs-15;
+}
+.fs-16{
+    font-size: $fs-16;
+}
+.fs-17{
+    font-size: $fs-17;
+}
+.fs-18{
+    font-size: $fs-18;
+}
+.fs-19{
+    font-size: $fs-19;
+}
+.fs-20{
+    font-size: $fs-20;
+}
+.text-primary,.txt-primary{
+    color: $primary !important;
+}
+.text-secondary{
+    color:gray !important;
+}
+.text-blue{
+    color: $secondary;
+}
+.text-danger{
+    color: $danger !important;
+}
+.text-warn{
+    color: #ff9966;
+}
+.pointer{
+    cursor: pointer;
+}
+.cursor-arrow{
+    cursor: default;
+}
+.bg-aliceblue{
+    background: aliceblue;
+}
+.bg-lightprimary{
+    background: #5a53b226;
+}
+.bg-tblHeadblue{
+    background: #dbebf6;
+}
+.bg-lightteal{
+    background: #dbebf6;
+}
+.border-primary{
+    border:1px solid $primary !important;
+}
+.bg-mediumblue{
+    background: rgba(101, 170, 231, 0.5411764706);
+}
+.bg-ligtblue{
+    background: #cee8ff;
+}
+.bg-lightgreen{
+    background: #00800024;
+}
+.bg-lightred{
+    background:#b253532e ;
+}
+.bg-lightviolet{
+    background: #dfdbf6 !important;
+}
+.bg-primary{
+    background: $primary !important;
+}
+.bg-lightorange{
+    background: #f8bda647;
+}
+.txt-primary{
+    color:#704ad6 !important;
+}
+.text-warn{
+    color:#dfaa0d;
+}
+.txt-success{
+    color:#76B440;
+}

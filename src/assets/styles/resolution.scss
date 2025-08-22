@@ -1,0 +1,87 @@
+@import 'assets/styles/theme.scss';
+@import './responsive.scss';
+
+@media only screen and (max-width: 1440px) {
+    .ant-steps.ant-steps-horizontal{
+        padding:5px 10px;
+        .ant-steps-item{
+            .ant-steps-item-icon{
+                .ant-steps-icon{
+                    font-size: $fs-13 !important;
+                }
+            }
+            .ant-steps-item-title{
+                font-weight: 600 !important;
+                border-bottom: 1px solid $primary;
+                padding-right: 0px;
+                margin-right:10px;
+                font-size: $fs-13 !important;
+        
+            }
+        }
+    }
+
+    .request-information{
+        h6, .upload-consent, .medication-label,.phq-ans-section  
+        {
+            font-size: $fs-13 !important;
+        }
+        .ant-input-group-addon{
+            .ant-btn{
+                height: 27px !important;
+            }
+            
+        }
+    }
+    .pipeline-wizard{
+        h6,.session-content 
+        {
+            font-size: $fs-13 !important;
+        }
+    }
+    .associated-file{
+        .associate-table{
+            .ant-table {
+                .ant-table-thead {
+                    tr th {
+                        font-size: $fs-13 !important;
+                    }
+                }
+                .ant-table-tbody {
+                    tr td {
+                        font-size: $fs-13 !important;
+                    }
+                }
+            }
+        }
+    }
+    .edf-processing{
+        .marker-list{
+            font-size: $fs-13 !important;
+        }
+    }
+    .interpretation-wizard{
+        .marker-name{
+            font-size: $fs-13 !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .wizard-container{
+        .wizard-cont2{
+            margin-top: 5px;
+            width: 100%;
+        }
+    }
+    .request-information{
+       
+        .ant-input-group-addon{
+            .ant-btn{
+                height: 24px !important;
+            }
+            
+        }
+    }
+
+}

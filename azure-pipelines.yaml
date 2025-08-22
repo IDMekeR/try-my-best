@@ -1,0 +1,167 @@
+trigger:
+  - Prod_Infrastructure
+  
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+  - stage:
+    jobs:
+      - job: BuildandPush
+        steps:
+        - task: Docker@2
+          inputs:
+            containerRegistry: 'eegdatahubprodregistry-endpoint'
+            repository: 'eeg_ui'
+            command: 'build'
+            Dockerfile: 'Dockerfile'
+            arguments: '--cache-from=eegdatahubprodregistry.azurecr.io/eeg_ui:latest'
+            tags: |
+              $(Build.BuildId)
+              latest
+        - task: Docker@2
+          inputs:
+            containerRegistry: 'eegdatahubprodregistry-endpoint'
+            repository: 'eeg_ui'
+            command: 'push'
+            tags: |
+              $(Build.BuildId)
+              latest
+        # - task: Docker@2
+        #   inputs:
+        #     containerRegistry: 'eegdatahubprodregistry-endpoint'
+        #     repository: 'eeg_ui'
+        #     command: 'buildAndPush'
+        #     Dockerfile: 'Dockerfile'
+        
+#### Dev ##########                
+  - stage: devdeploy
+    displayName: Development
+    jobs: 
+      - deployment:
+        environment: dev-aks-cluster
+        variables:
+         - group: dev_ui_vars
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - checkout: self
+                  displayName: "Checkout Repository"
+                - task: replacetokens@6
+                  inputs:
+                    sources: 'manifests/*.yaml'
+                    tokenPattern: 'azpipelines'
+                
+                - task: KubernetesManifest@1
+                  inputs:
+                    action: 'deploy'
+                    connectionType: 'kubernetesServiceConnection'
+                    kubernetesServiceConnection: 'dev-aks-cluster-eegdatahub-prod-cluster-eegdev-1742289847286'
+                    namespace: 'eegdev'
+                    manifests: 'manifests/deploy.yaml'
+
+                - task: KubernetesManifest@1
+                  inputs:
+                    action: 'deploy'
+                    connectionType: 'kubernetesServiceConnection'
+                    kubernetesServiceConnection: 'dev-aks-cluster-eegdatahub-prod-cluster-eegdev-1742289847286'
+                    namespace: 'eegdev'
+                    manifests: 'manifests/svc.yaml'
+                
+                - task: KubernetesManifest@1
+                  inputs:
+                    action: 'deploy'
+                    connectionType: 'kubernetesServiceConnection'
+                    kubernetesServiceConnection: 'dev-aks-cluster-eegdatahub-prod-cluster-eegdev-1742289847286'
+                    namespace: 'eegdev'
+                    manifests: 'manifests/ingress.yaml'
+#### Stage ##########
+  - stage: stagedeploy
+    displayName: Staging
+    jobs: 
+      - deployment:
+        environment: dev-aks-cluster
+        variables:
+         - group: stage_ui_vars
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - checkout: self
+                  displayName: "Checkout Repository"
+                - task: replacetokens@6
+                  inputs:
+                    sources: 'manifests/*.yaml'
+                    tokenPattern: 'azpipelines'
+
+                - task: KubernetesManifest@1
+                  inputs:
+                    action: 'deploy'
+                    connectionType: 'kubernetesServiceConnection'
+                    kubernetesServiceConnection: 'staging-aks-cluster-eegdatahub-prod-cluster-eegstaging-1742289956883'
+                    namespace: 'eegstaging'
+                    manifests: 'manifests/deploy.yaml'
+
+                - task: KubernetesManifest@1
+                  inputs:
+                    action: 'deploy'
+                    connectionType: 'kubernetesServiceConnection'
+                    kubernetesServiceConnection: 'staging-aks-cluster-eegdatahub-prod-cluster-eegstaging-1742289956883'
+                    namespace: 'eegstaging'
+                    manifests: 'manifests/svc.yaml'
+                
+                - task: KubernetesManifest@1
+                  inputs:
+                    action: 'deploy'
+                    connectionType: 'kubernetesServiceConnection'
+                    kubernetesServiceConnection: 'staging-aks-cluster-eegdatahub-prod-cluster-eegstaging-1742289956883'
+                    namespace: 'eegstaging'
+                    manifests: 'manifests/ingress.yaml'
+
+#### Stage ##########
+  - stage: deploy
+    displayName: Production
+    jobs: 
+      - deployment:
+        environment: prod-aks-cluster
+        variables:
+         - group: prod_ui_vars
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - checkout: self
+                  displayName: "Checkout Repository"
+                - task: replacetokens@6
+                  inputs:
+                    sources: 'manifests/*.yaml'
+                    tokenPattern: 'azpipelines'
+
+                - task: KubernetesManifest@1
+                  inputs:
+                    action: 'deploy'
+                    connectionType: 'kubernetesServiceConnection'
+                    kubernetesServiceConnection: 'prod-aks-cluster-eegdatahub-prod-cluster-eegprod-1742289911461'
+                    namespace: 'eegprod'
+                    manifests: 'manifests/prod-deploy.yaml'
+
+                - task: KubernetesManifest@1
+                  inputs:
+                    action: 'deploy'
+                    connectionType: 'kubernetesServiceConnection'
+                    kubernetesServiceConnection: 'prod-aks-cluster-eegdatahub-prod-cluster-eegprod-1742289911461'
+                    namespace: 'eegprod'
+                    manifests: 'manifests/svc.yaml'
+                
+                - task: KubernetesManifest@1
+                  inputs:
+                    action: 'deploy'
+                    connectionType: 'kubernetesServiceConnection'
+                    kubernetesServiceConnection: 'prod-aks-cluster-eegdatahub-prod-cluster-eegprod-1742289911461'
+                    namespace: 'eegprod'
+                    manifests: 'manifests/prodingress.yaml'
+                  
+                  
+                
+             

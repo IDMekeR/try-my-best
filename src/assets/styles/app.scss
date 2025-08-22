@@ -1,0 +1,368 @@
+@import 'assets/styles/theme.scss';
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
+@font-face {
+    font-family: "Trade Gothic Next SR Pro Bd Cm";
+    src: url("~assets/fonts/TradeGothicNextSRPro/TradeGothicNextSRPro-BdCm.eot");
+    src: local("Trade Gothic Next Soft Rounded Pro Bold Compressed"), local("TradeGothicNextSRPro-BdCm"),
+        url("~assets/fonts/TradeGothicNextSRPro/TradeGothicNextSRPro-BdCm.eot?#iefix") format("embedded-opentype"),
+        url("~assets/fonts/TradeGothicNextSRPro/TradeGothicNextSRPro-BdCm.woff2") format("woff2"),
+        url("~assets/fonts/TradeGothicNextSRPro/TradeGothicNextSRPro-BdCm.woff") format("woff"),
+        url("~assets/fonts/TradeGothicNextSRPro/TradeGothicNextSRPro-BdCm.ttf") format("truetype"),
+        url("~assets/fonts/TradeGothicNextSRPro/TradeGothicNextSRPro-BdCm.svg#TradeGothicNextSRPro-BdCm") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RobotoRegular';
+    /* Font family name */
+    src: url('../fonts/Roboto/RobotoCondensed-Regular.ttf') format('truetype');
+    /* Font file path */
+}
+@font-face {
+    font-family: 'RobotoLight';
+    /* Font family name */
+    font-weight: 500;
+    src: url('../fonts/Roboto/RobotoCondensed-Light.ttf') format('truetype');
+    /* Font file path */
+}
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('../fonts/Roboto/RobotoCondensed-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'RobotoMedium';
+    src: url('../fonts/Roboto/RobotoCondensed-Medium.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    border: 0;
+    outline: none;
+    padding: 0;
+    font-family: "Lato", "sans-serif";
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+.App {
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    // background: #efefef;
+}
+
+html,
+body {
+    font-family: "Lato", sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+    height: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #eaeaea;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $primary;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.section-height::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+  }
+  
+  .section-height::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background color of the track */
+  }
+  
+  .section-height::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Round corners of the scrollbar thumb */
+  }
+  
+  .section-height::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color when hovered */
+  }
+  
+  /* For Firefox */
+  .section-height {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #888 #f1f1f1; /* Scrollbar thumb and track colors */
+  }
+  
+  /* For Internet Explorer and Edge */
+  .section-height {
+    -ms-overflow-style: 'scrollbar'; /* Show scrollbar in IE and Edge */
+  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    // font-family: "Trade Gothic Next SR Pro Bd Cm";
+    font-weight: bold;
+    // color: $primary;
+}
+
+.template-height::-webkit-scrollbar,
+.template-heights::-webkit-scrollbar,
+.notification-container::-webkit-scrollbar,
+.error-job-container::-webkit-scrollbar,
+.notify-height::-webkit-scrollbar, 
+.topo-height::-webkit-scrollbar,
+.term-height::-webkit-scrollbar,
+.scrollable-term-container::-webkit-scrollbar
+{
+  width: 12px; /* Width of the scrollbar */
+}
+  
+.template-height::-webkit-scrollbar-track, 
+.template-heights::-webkit-scrollbar-track,
+.notification-container::-webkit-scrollbar-track,
+.error-job-container::-webkit-scrollbar-track,
+.notify-height::-webkit-scrollbar-track,
+.topo-height::-webkit-scrollbar-track,
+.scrollable-term-container::-webkit-scrollbar-track
+{
+  background: #f1f1f1; /* Background color of the track */
+}
+  
+.template-height::-webkit-scrollbar-thumb,
+.template-heights::-webkit-scrollbar-thumb,
+.notification-container::-webkit-scrollbar-thumb,
+.error-job-container::-webkit-scrollbar-thumb,
+.notify-height::-webkit-scrollbar-thumb,
+.topo-height::-webkit-scrollbar-thumb,
+.terms-height::-webkit-scrollbar-thumb,
+.scrollable-term-container::-webkit-scrollbar-thumb
+ {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 6px; /* Round corners of the scrollbar thumb */
+}
+  
+.template-height::-webkit-scrollbar-thumb:hover,
+.template-height::-webkit-scrollbar-thumb:hover,
+.notification-container::-webkit-scrollbar-thumb:hover,
+.error-job-container::-webkit-scrollbar-thumb:hover,
+.notify-height::-webkit-scrollbar-thumb:hover,
+.topo-height::-webkit-scrollbar-thumb:hover,
+.scrollable-term-container::-webkit-scrollbar-thumb:hover
+{
+  background: #555; /* Color when hovered */
+}
+  
+  /* For Firefox */
+.template-height ,
+.template-heights,
+.notification-container,
+.notify-height,
+.error-job-container,
+.topo-height,
+.terms-height,
+.scrollable-term-container
+{
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #888 #f1f1f1; /* Scrollbar thumb and track colors */
+}
+
+/* For Internet Explorer and Edge */
+.template-height,
+.template-heights,
+.notification-container,
+.notify-height,
+.error-job-container,
+.topo-height,
+.terms-height
+{
+  -ms-overflow-style: 'scrollbar'; /* Show scrollbar in IE and Edge */
+}
+
+.ant-drawer{
+    .ant-drawer-body{
+        padding:5px !important
+    }
+}
+.yellow-btn.ant-btn{
+  background: orange;
+  border:0px !important;
+  border-radius: 4px !important;
+}
+.yellow-btn.ant-btn:hover {
+  background: orange !important; 
+}
+.error-notify{
+  background: #f080803b;
+  color:#e50d0d;
+  border:1px solid #e50d0d;
+  padding:5px 12px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.template-height.released-req.sub-section{
+    height:52vh !important;
+  }
+
+.template-height.released-req{
+  height:82vh !important;
+}
+.template-height.released-req.dataset{
+  height:75vh !important;
+}
+.template-height.released-req.datahub{
+  height:75vh !important;
+}
+.markuphtml {
+  p {
+      font-family: 'RobotoRegular' !important;
+      color: #000;
+      font-size: 17px !important;
+      line-height: 1.2 !important;
+  }
+}
+// styling for interpretation contetn if the content exceed the standard count
+// .interpretation-editor{
+//   .jodit-wysiwyg{
+//     max-height: 240px;
+//   }
+// }
+
+.markuphtml.medium-font.template2 p {
+  font-size: 16px !important;  
+  line-height: 1.4 !important;
+}
+
+.markuphtml.small-font.template2{
+  p {
+      font-family: 'RobotoRegular' !important;
+      color: #000;
+      font-size: 14px !important;
+      line-height: 1.2 !important;
+  }
+}
+
+.markuphtml.large-font.template1{
+  p {
+      font-family: 'RobotoRegular' !important;
+      color: #000;
+      font-size: 17px !important;
+      line-height: 1.2 !important;
+  }
+}
+
+.markuphtml.medium-font.template1 p {
+  font-size: 14px !important;  
+  line-height: 1.4 !important;
+}
+
+.markuphtml.small-font.template1 p {
+  font-size: 11.5px !important;  
+  line-height: 1.4 !important;
+}
+
+.markuphtml1{
+  p, div {
+      font-family: 'RobotoRegular' !important;
+      color: #000;
+      font-size: 14px !important;
+      line-height: 1.2 !important;
+      word-break: auto-phrase !important;
+  }
+}
+.markuphtml1{
+  p, div {
+      font-family: 'RobotoRegular' !important;
+      color: #000;
+      font-size: 14px !important;
+      line-height: 1.2 !important;
+      word-break: auto-phrase !important;
+  }
+}
+
+.loader-indicator {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.loader-indicator div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #c517f0;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.loader-indicator div:nth-child(1) {
+  left: 8px;
+  animation: flip1 0.6s infinite;
+}
+
+.loader-indicator div:nth-child(2) {
+  left: 8px;
+  animation: flip2 0.6s infinite;
+}
+
+.loader-indicator div:nth-child(3) {
+  left: 32px;
+  animation: flip2 0.6s infinite;
+}
+
+.loader-indicator div:nth-child(4) {
+  left: 56px;
+  animation: flip3 0.6s infinite;
+}
+
+@keyframes flip1 {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes flip3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes flip2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+.loader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}

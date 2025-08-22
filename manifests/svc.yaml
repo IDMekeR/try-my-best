@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: eeg-ui-service
+  labels:
+    app: eeg-ui
+spec:
+  selector:
+    app: eeg-ui
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP

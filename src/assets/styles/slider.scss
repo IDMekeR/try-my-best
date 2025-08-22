@@ -1,0 +1,131 @@
+.tempSlider {
+    .top-circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #31436b;
+        font-family: Arial, sans-serif;
+        position: relative;
+        .inner-circle {
+            position: absolute;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background-color: #31436b;
+            border: 2px solid #fff;
+            top: 2px;
+            left: 2px;
+            z-index: 1;
+        }
+    }
+
+    .rectangle {
+        width: 180px;
+        height: 43px;
+        background-color: #31436b;
+        z-index: 1;
+    }
+    .rectangle::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%); /* Adjust to center the triangle vertically */
+        right: -32px;
+        transform: translateY(-50%);
+        border-left: 34px solid #31436b;
+        border-top: 22px solid transparent;
+        border-bottom: 22px solid transparent;
+    }
+
+    .sliderWrapper {
+        position: relative !important;
+        .ant-slider-step {
+            display: none;
+        }
+        .ant-slider-mark-text {
+            .current-position {
+                font-weight: bold;
+                position: relative; /* Allows for adjustment using top */
+                top: -45px;
+            }
+        }
+        .ant-slider-handle {
+            border: none;
+            border-radius: 5px; /* Rectangular handle */
+            background-color: #001529; /* Dark color for handle */
+            height: 30px; /* Custom height */
+            width: 8px; /* Custom width */
+        }
+        .ant-slider-track {
+            display: none !important;
+        }
+
+        .ant-slider-mark-text {
+            color: #001529; /* Dark color for the text marks */
+        }
+
+        .ant-slider-rail {
+            height: 6px !important;
+        }
+        .ant-slider-mark {
+            top: 12px; /* Adjust positioning of marks */
+        }
+        .slider-handle {
+            position: absolute;
+            background-color: #3c4863; /* Same color as handles */
+            height: 25px; /* Height of the "handle" */
+            width: 6px; /* Width of the "handle" */
+            top: 10px; /* Positioning it in the middle */
+        }
+
+        .start-handle {
+            border-radius: 5px;
+            top: 5px;
+            left: 1px;
+            z-index: 1;
+        }
+
+        .end-handle {
+            right: 1px;
+            border-radius: 5px; /* Optional: rounded edges */
+            top: 5px; /* Positioning it in the middle */
+            z-index: 1;
+        }
+    }
+    /* slider.scss */
+    .sliderWrapper .ant-slider-rail {
+        background: linear-gradient(to right, #3c4863 0%, #3c4863 var(--stop1, 20%), #8f8f8f var(--stop1, 20%), #8f8f8f var(--stop2, 50%), #e5b176 var(--stop2, 50%), #e5b176 100%) !important;
+        border-radius: 5px;
+    }
+
+    .circle {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        background-color: #e6e6e6;
+        font-family: Arial, sans-serif;
+        position: relative;
+        .inner-ring {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #e6e6e6;
+            border: 2.5px solid #fff;
+            top: 3px;
+            left: 2.5px;
+            z-index: 1;
+            .number {
+                font-size: 20px;
+                font-weight: bold;
+                color: #3c4863;
+                z-index: 2;
+            }
+            .text {
+                font-size: 10px;
+                color: #000;
+                z-index: 2;
+            }
+        }
+    }
+}

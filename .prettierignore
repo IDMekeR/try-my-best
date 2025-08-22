@@ -1,0 +1,7 @@
+package.json
+package-lock.json
+build/
+/node/modules/*
+dist
+assets/
+e2e/

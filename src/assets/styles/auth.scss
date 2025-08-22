@@ -1,0 +1,259 @@
+@import 'assets/styles/theme.scss';
+@import 'assets/styles/responsive.scss';
+
+.sign-up-acc {
+    .ant-upload-wrapper .ant-upload-drag {
+        background: #fff;
+    }
+}
+
+.login-container {
+    background: $white;
+    height: 100vh;
+    width: 100%;
+
+    .ant-image {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .login-right-cont {
+        .ant-image {
+            width: 65%;
+        }
+    }
+
+    .login-img-right {
+        display: none;
+    }
+
+    .login-btn.ant-btn-primary {
+        height: 40px;
+        border-radius: 4px;
+        background: $secondary !important;
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    .res-img {
+        display: none;
+    }
+
+    .ant-form {
+        width: 75%;
+    }
+
+    h1 {
+        font-size: 32px !important;
+    }
+
+    h4 {
+        font-size: $fs-20 !important;
+    }
+}
+
+// 110%
+@media only screen and (max-width: 1745.45px) {
+    h1 {
+        font-size: 25px !important;
+        margin-bottom: 4px !important;
+        margin-top: 10px !important;
+    }
+
+    h4 {
+        font-size: $fs-17 !important;
+    }
+
+}
+
+@include lg {
+    h1 {
+        font-size: 26px !important;
+    }
+
+    h4 {
+        font-size: $fs-18 !important;
+    }
+}
+
+// 150%
+@media only screen and (max-width: 1280px) {
+    .login-container {
+        .col-md-4.login-right-cont {
+            background: $white;
+
+            .ant-image {
+                width: 70% !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            h1 {
+                font-size: 18px !important;
+                margin-top: 10px !important;
+            }
+
+            h4 {
+                font-size: $fs-12 !important;
+            }
+
+            .my-auto {
+                width: 100% !important;
+
+                .eeg-img {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 20px !important;
+                }
+
+                .res-img {
+                    display: none;
+                }
+
+                .ant-form {
+                    width: 90% !important;
+                    margin-top: 20px !important;
+
+                    .ant-form-item {
+                        margin-bottom: 7px !important;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@include tab {
+    .login-container {
+        .col-md-8 {
+            width: 100% !important;
+            height: auto !important;
+
+            .ant-image {
+                width: auto;
+                height: 550px !important;
+            }
+        }
+
+        .login-right-cont {
+            .ant-image {
+                width: 65% !important;
+            }
+        }
+
+        h1 {
+            font-size: $fs-20;
+        }
+
+        h4 {
+            font-size: $fs-16;
+        }
+    }
+
+    .res-img {
+        display: block !important;
+    }
+
+    .col-md-4.login-right-cont {
+        width: 100% !important;
+        margin: 0px !important;
+        background: $white;
+
+        .my-auto {
+            margin-top: 0px !important;
+            text-align: center;
+            width: 100% !important;
+
+            .ant-form {
+                width: 100% !important;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    h5 {
+        width: 75% !important;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: start;
+    }
+
+    .eeg-logo {
+        display: none;
+    }
+}
+
+@include mob-ver {
+    .res-img {
+        display: none !important;
+    }
+
+    .login-bg-container {
+        display: none !important;
+
+        .eeg-logo {
+            text-align: center;
+        }
+
+        .col-md-4.login-right-cont {
+            width: 100% !important;
+
+            .ant-image {
+                text-align: center;
+            }
+
+            .my-auto {
+                margin-top: 0px !important;
+                text-align: center;
+                width: 100% !important;
+
+                .ant-form {
+                    width: 100% !important;
+                }
+
+            }
+        }
+    }
+
+    h5 {
+        margin-top: 0px !important;
+    }
+
+    .login-img-right {
+        display: block !important;
+    }
+}
+
+@media only screen and (max-width: 765px) {
+    .login-bg-container {
+        display: none !important;
+    }
+
+    .login-img-right {
+        display: block !important;
+    }
+
+    .login-container .col-md-4.login-right-cont .my-auto .ant-form {
+        width: 100% !important;
+    }
+
+    .col-md-4.login-right-cont {
+        .ant-image {
+            display: flex;
+            align-items: center;
+
+            .eeg-logo {
+                width: 80%;
+                margin: auto;
+            }
+        }
+
+        .my-auto {
+            margin-top: 20px !important;
+        }
+    }
+}

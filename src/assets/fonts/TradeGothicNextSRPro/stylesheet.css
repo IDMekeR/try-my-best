@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Trade Gothic Next SR Pro Bd Cm';
+    src: url('TradeGothicNextSRPro-BdCm.eot');
+    src: local('Trade Gothic Next Soft Rounded Pro Bold Compressed'), local('TradeGothicNextSRPro-BdCm'),
+        url('TradeGothicNextSRPro-BdCm.eot?#iefix') format('embedded-opentype'),
+        url('TradeGothicNextSRPro-BdCm.woff2') format('woff2'),
+        url('TradeGothicNextSRPro-BdCm.woff') format('woff'),
+        url('TradeGothicNextSRPro-BdCm.ttf') format('truetype'),
+        url('TradeGothicNextSRPro-BdCm.svg#TradeGothicNextSRPro-BdCm') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

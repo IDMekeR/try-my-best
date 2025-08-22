@@ -1,0 +1,86 @@
+.termModal {
+    .scrollable-term-container {
+        font-size: 12px;
+        line-height: 2;
+        height: 300px !important;
+        overflow-y: auto !important;
+    }
+    .icon-down {
+        background: #8880f0;
+        .anticon svg {
+            width: 16px;
+            height: 15px;
+
+            .cls-1 {
+                fill: white;
+            }
+        }
+    }
+    .footerButtons {
+        .agreeButton.disable {
+            background-color: #e5e5e5 !important;
+            color: #737373;
+        }
+    }
+}
+//100% screen resolution  1500px
+@media only screen and (max-width: 1550px) {
+    .termModal {
+        width: 65% !important;
+        .scrollable-term-container {
+            height: 220px !important;
+        }
+    }
+}
+//110% screen resolution 1400px
+@media only screen and (max-width: 1400px) {
+    .termModal {
+        width: 68% !important;
+        .scrollable-term-container {
+            height: 200px !important;
+        }
+        .termcontent {
+            line-height: 1.5 !important;
+        }
+    }
+}
+//125% screen resolution 1250px
+@media only screen and (max-width: 1250px) {
+    .termModal {
+        width: 70% !important;
+        .scrollable-term-container {
+            height: 180px !important;
+        }
+    }
+}
+//150% screen resolution 1050pox
+@media only screen and (max-width: 1050px) {
+    .termModal {
+        width: 80% !important;
+        .scrollable-term-container {
+            height: 160px !important;
+        }
+    }
+}
+// screen resolution 1050pox
+@media only screen and (max-width: 768px) {
+  
+    .termModal {
+        width: 90% !important;
+        .termServiceSection3 {
+            .termcontent {
+                line-height: 1.3 !important;
+            }
+        }       
+        .footerButtons {
+            display: flex;
+            flex-direction: column !important;
+            .termsDownload {
+                text-align: start;
+                margin-bottom: 10px !important;
+                text-wrap: wrap !important;
+                width: 100% !important;
+            }
+        }
+    }
+}

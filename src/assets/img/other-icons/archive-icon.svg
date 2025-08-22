@@ -1,0 +1,7 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<defs><style>.cls-1{fill:#fff;} .cls-2{fill:#fff;} .cls-3{fill:#ed7d31;} .cls-4{stroke-color:#fff;fill:#fff;}</style></defs>
+<path class="cls-3" d="M155,163H45a8,8,0,0,1-8-8V61a2,2,0,0,1,2-2H161a2,2,0,0,1,2,2v94A8,8,0,0,1,155,163ZM41,63v92a4,4,0,0,0,4,4H155a4,4,0,0,0,4-4V63Z"/>
+<path class="cls-1" d="M169.5,63H30.5a8,8,0,0,1-8-8V45a8,8,0,0,1,8-8h139a8,8,0,0,1,8,8V55A8,8,0,0,1,169.5,63ZM30.5,41a4,4,0,0,0-4,4V55a4,4,0,0,0,4,4h139a4,4,0,0,0,4-4V45a4,4,0,0,0-4-4Z"/>
+<rect class="cls-3" x="26" y="35" width="148" height="25" rx="6"/>
+<rect class="cls-3" x="40" y="63" width="120" height="98" rx="0"/>
+<rect class="cls-4" x="73" y="79" width="54" height="20" rx="6" /></svg>

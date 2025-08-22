@@ -1,0 +1,57 @@
+@import './theme.scss';
+
+.page-one ,.page-two,.page-three,.page-four{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    width: 210mm;
+    min-height: 295mm; /* Height of A4 in mm */
+    transition: zoom 0.3s ease; /* Smooth zoom transition */
+    overflow: hidden; /* Prevent overflow issues */
+}
+.page-content {
+    flex: 1; /* Takes up available space */
+}
+.page-body{
+    padding:0px 15px;
+}
+.report-template{
+    .markuphtml{
+        p{
+            font-family: 'RobotoRegular' !important;
+        }
+    }
+}
+.page-four{
+   .apexcharts-canvas .apexcharts-legend{
+        margin-top: -13px !important;
+    }
+}
+
+.page-header{
+    .left-icon{
+        margin-top: -15px;
+    }
+    .heading{
+        margin-top: 33px !important;
+        margin-left: -15px !important;
+        font-size: 30px !important;
+    }
+    .img-txt{
+        margin-top: 15px;
+        margin-left:-34px;
+    }
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: start; 
+    padding: 5px 0; /* Optional: for better spacing */
+}
+.template-controls{
+    position:sticky;
+    top:0;
+    z-index: 999;
+}

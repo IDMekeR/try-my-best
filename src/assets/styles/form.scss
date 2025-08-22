@@ -1,0 +1,868 @@
+@import 'assets/styles/theme.scss';
+@import 'assets/styles/responsive.scss';
+
+.ant-input-affix-wrapper,
+.ant-input,
+// .ant-select-selector,
+.ant-input-number,
+.ant-picker-outlined {
+    height: 40px;
+    border-radius: 3px !important;
+    font-size: $fs-15;
+    padding: 0px 15px;
+
+    .ant-input {
+        height: inherit;
+    }
+}
+.cus-select{
+    .ant-select-selector {
+        height: 32px !important;
+    } 
+}
+.ant-form{
+    .ant-select-selector {
+        border-radius: 3px !important;
+        font-size: $fs-15;
+        padding: 0px 15px;
+        height: 40px !important;
+    }
+}
+
+.ant-select-multiple .ant-select-selector{
+    overflow: auto;
+}
+
+// .select .ant-select-selector {
+//     height: 34px !important;
+// }
+
+// .ant-select {
+//     // height: 40px;
+
+//     .ant-select-selector {
+//         overflow: auto;
+//     }
+// }
+
+.ant-form-item {
+    .ant-form-item-label {
+        label {
+            font-size: $fs-16 !important;
+        }
+    }
+}
+
+.ant-input.temp-input,
+.ant-picker.temp-input,
+.ant-select.temp-input .ant-select-selector {
+    height: 28px !important;
+}
+
+.result-preview-header {
+    .ant-select {
+        height: 32px !important;
+    }
+}
+
+.pnt-consent-upload {
+    .ant-upload.ant-upload-btn {
+        background: white !important;
+    }
+
+    .ant-upload-list-item-container {
+        width: 100% !important;
+        margin-top: 5px !important;
+        display: none !important;
+
+        .ant-upload-list-item {
+            padding: 0px !important;
+            background-color: aliceblue;
+
+        }
+    }
+}
+
+table.ant-picker-content thead tr {
+    background: $primary;
+
+    th {
+        color: $white !important;
+    }
+}
+
+.ant-input-group-addon {
+    padding: 0px !important;
+    border: 1px solid $primary !important;
+
+    .ant-btn {
+        height: 38px !important;
+        margin: 0px !important;
+    }
+}
+
+.ant-picker-content {
+    border-bottom: 1px solid lightgray;
+}
+
+//calendar
+table.ant-picker-content tbody tr {
+    td:first-child {
+        border-left: 1px solid lightgray;
+    }
+
+    td:last-child {
+        border-right: 1px solid lightgray;
+    }
+}
+
+.ant-input-group-wrapper {
+    .ant-input-disabled {
+        background: $white !important;
+        color: $txtcolor !important;
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+    }
+
+    .ant-input-group-addon {
+        .ant-btn {
+            height: 40px;
+            color: $white;
+            cursor: pointer;
+            border-top-left-radius: 0px !important;
+            border-bottom-left-radius: 0px !important;
+        }
+    }
+}
+
+.ant-form-item {
+    .ant-btn {
+        height: 40px;
+        border-radius: 4px !important;
+        border: 0px;
+    }
+
+    .ant-btn.acc-active-btn,
+    .ant-btn.acc-active-btn:hover {
+        background: green;
+        color: $white;
+    }
+
+    .ant-btn.acc-inactive-btn,
+    .ant-btn.acc-inactive-btn:hover {
+        background: $danger;
+        color: $white;
+    }
+}
+
+.ant-form-item-label {
+    padding-bottom: 1px !important;
+}
+
+.ant-checkbox .ant-checkbox-inner {
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+}
+
+.ant-input-number,
+.ant-input-number-affix-wrapper {
+    padding: 0px 15px;
+    border-radius: 3px;
+
+    .ant-input-number-input {
+        height: 40px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .ant-input-number-handler-wrap {
+        display: none;
+    }
+}
+
+.non-form-field {
+    .ant-input-number-affix-wrapper {
+        height: 33px;
+    }
+
+    .ant-input-number {
+        padding-left: 0.1rem;
+    }
+
+    .ant-input-number,
+    .ant-input-number-input-wrap,
+    .ant-input-number-input {
+        height: 31px;
+    }
+}
+
+.session-checkbox {
+    .ant-checkbox .ant-checkbox-inner {
+        width: 14px;
+        height: 14px;
+    }
+
+    .ant-checkbox-wrapper-disabled.ant-checkbox-wrapper {
+        cursor: pointer;
+
+        .ant-checkbox .ant-checkbox-inner {
+            background: white !important;
+
+        }
+    }
+}
+
+.ant-upload-wrapper .ant-upload-drag {
+    border-radius: 4px !important;
+}
+
+.ant-form-item.ant-form-item-has-error {
+    .ant-upload-wrapper .ant-upload-drag {
+        border: 1px dashed $danger;
+    }
+}
+
+.pnt-require {
+    .ant-radio-group .ant-radio-wrapper {
+        font-size: 16px !important;
+    }
+
+    .ant-checkbox-wrapper {
+        font-size: 16px !important;
+    }
+
+    .session-checkbox {
+        .ant-checkbox-wrapper {
+            font-size: 14px !important;
+        }
+    }
+}
+
+.req-file-upload {
+    .ant-upload-list-item-container {
+        width: 100% !important;
+        margin-top: 3px;
+    }
+}
+
+.edf-setting-tab {
+    .ant-radio-button-wrapper-checked {
+        background: #b2d8d861 !important;
+        color: $txtcolor !important;
+        font-weight: 600;
+        border-radius: 3px !important;
+    }
+
+    .ant-radio-button-wrapper::before {
+        // display: none !important;
+        height: 0px !important;
+        display: none;
+    }
+
+    .ant-radio-button.ant-radio-button-checked {
+        display: none;
+    }
+}
+
+.service-agreement {
+    .ant-checkbox-wrapper {
+        .ant-checkbox-inner {
+            border: 1px solid lightgray;
+            background-color: $white !important;
+        }
+    }
+
+    .ant-checkbox-wrapper-disabled.ant-checkbox-wrapper-checked {
+        cursor: auto;
+
+        .ant-checkbox-inner {
+            background-color: $secondary !important;
+            border-color: $secondary !important;
+        }
+
+        .ant-checkbox-inner:after {
+            border-color: $white !important;
+        }
+    }
+}
+
+//antselect scrolbar
+.ant-select-selector::-webkit-scrollbar {
+    width: 12px;
+    /* Width of the scrollbar */
+}
+
+.ant-select-selector::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Background color of the track */
+}
+
+.ant-select-selector::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Color of the scrollbar thumb */
+    border-radius: 6px;
+    /* Round corners of the scrollbar thumb */
+}
+
+.ant-select-selector::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* Color when hovered */
+}
+
+/* For Firefox */
+.ant-select-selector {
+    scrollbar-width: thin;
+    /* Thin scrollbar */
+    scrollbar-color: #888 #f1f1f1;
+    /* Scrollbar thumb and track colors */
+}
+
+/* For Internet Explorer and Edge */
+.ant-select-selector {
+    -ms-overflow-style: 'scrollbar';
+    /* Show scrollbar in IE and Edge */
+}
+
+.ant-select {
+    padding: 0px !important;
+}
+
+
+@media only screen and (max-width: 1745.45px) {
+    .ant-form-item {
+        .ant-form-item-label {
+            label {
+                font-size: 14.5px !important;
+            }
+        }
+    }
+
+    .ant-select-selector {
+        height: 34px !important;
+    }
+
+    .ant-input-affix-wrapper,
+    .ant-input,
+    // .ant-select-selector,
+    .ant-input-number,
+    .ant-picker-outlined {
+        height: 34px;
+        border-radius: 3px !important;
+        font-size: $fs-14;
+        padding: 0px 15px;
+
+        .ant-input {
+            height: inherit;
+        }
+    }
+
+    // .select .ant-select-selector {
+    //     height: 34px !important;
+    // }
+
+    // .ant-select {
+    //     // height: 34px;
+
+    //     .ant-select-selector {
+    //         overflow: auto;
+    //     }
+    // }
+
+    .section-title {
+
+        h6,
+        h6 a {
+            font-size: 14.5px !important;
+        }
+    }
+
+    .medic-section {
+        h6 {
+            font-size: 14.5px !important;
+        }
+    }
+}
+
+// 125%
+@include lg {
+    .result-preview-header{
+        .ant-select{
+            width: 200px !important;
+        }
+    }
+    .ant-select-selector {
+        height: 28px !important;
+    }
+
+    .ant-input-affix-wrapper,
+    .ant-input,
+    // .ant-select-selector,
+    .ant-input-number,
+    // .ant-select,
+    .ant-picker-outlined {
+        height: 28px !important;
+        overflow: hidden !important;
+        font-size: $fs-12;
+        padding: 0px 10px;
+
+        .ant-select-selection-search-input {
+            height: inherit !important;
+        }
+
+        .ant-picker-input {
+            input {
+                font-size: 13px !important;
+            }
+        }
+
+        .ant-select-selection-item {
+            font-size: 13px !important;
+        }
+
+        .ant-input-number-input {
+            height: inherit;
+        }
+
+        .ant-input {
+            height: inherit;
+        }
+    }
+
+    .section-title {
+
+        h6,
+        h6 a {
+            font-size: 13.5px !important;
+        }
+    }
+
+    .medic-section {
+        h6 {
+            font-size: 13.5px !important;
+        }
+
+        .medication-title {
+            font-size: 13px !important;
+        }
+    }
+
+    .ant-form-item {
+        .ant-form-item-label {
+            label {
+                font-size: $fs-13 !important;
+            }
+        }
+    }
+
+    .ant-form-item-explain-error {
+        font-size: $fs-14;
+    }
+
+    .pnt-intake-form {
+        h3 {
+            font-size: 20px !important;
+        }
+
+        .ant-row.ant-row-border {
+            .col-md-4 {
+                h5 {
+                    font-size: 16px !important;
+                    margin-left: 0px !important;
+                    ;
+                    margin-right: 0px !important;
+                }
+
+                h6 {
+                    font-size: 15px !important;
+                }
+            }
+        }
+    }
+
+    .ant-select-item-option {
+        .ant-select-item-option-content {
+            font-size: 12px !important;
+        }
+    }
+
+    .session-checkbox {
+
+        // .ant-checkbox {
+        .ant-checkbox-wrapper {
+            span {
+                font-size: 12px !important;
+            }
+        }
+
+        .ant-checkbox-inner {
+            width: 14px;
+            height: 14px;
+        }
+
+        // }
+
+    }
+
+    .ant-checkbox .ant-checkbox-inner {
+        width: 15px;
+        height: 15px;
+        margin-top: 2px;
+    }
+
+    .ant-checkbox-wrapper {
+
+        span.text-black,
+        span {
+            font-size: 13px !important;
+        }
+    }
+}
+
+// 150%
+@media only screen and (max-width: 1280px) {
+    .ant-select{
+        .ant-select-arrow{
+            padding-bottom: 7px;
+        }
+    }
+    .ant-select-selector {
+        height: 24px !important;
+    }
+    .result-preview-header{
+        .ant-select{
+            width: 150px !important;
+        }
+    }
+    .ant-select-item-option {
+        .ant-select-item-option-content {
+            font-size: 10px !important;
+        }
+    }
+
+    .section-title {
+
+        h6,
+        h6 a {
+            font-size: 12px !important;
+        }
+    }
+
+    .medic-section {
+        h6 {
+            font-size: 12px !important;
+        }
+
+        .medication-title {
+            font-size: 12px !important;
+        }
+    }
+
+    .ant-form {
+        .ant-form-item {
+            margin-bottom: 5px !important;
+        }
+
+        .ant-btn {
+            height: 27px !important;
+
+            span {
+                font-size: 12px !important;
+            }
+        }
+    }
+
+    .ant-checkbox .ant-checkbox-inner {
+        width: 12px;
+        height: 12px;
+        margin-top: 2px;
+    }
+
+    .ant-checkbox-wrapper {
+
+        span.text-black,
+        span {
+            font-size: 12px !important;
+        }
+    }
+
+    .session-checkbox {
+        .ant-checkbox .ant-checkbox-inner {
+            width: 10px;
+            height: 10px;
+            margin-top: 2px;
+        }
+
+        .ant-checkbox-wrapper {
+
+            span.text-black,
+            span {
+                font-size: 10px !important;
+            }
+        }
+    }
+
+    .ant-radio-wrapper {
+        .ant-radio-inner {
+            width: 10px;
+            height: 10px;
+        }
+
+        span {
+            font-size: 12px !important;
+        }
+    }
+
+    .ant-select-selector .ant-select-selection-item {
+        font-size: $fs-11 !important;
+      
+    }
+    .ant-form{
+        .ant-select{
+            margin-top: 3px !important;
+        }
+    }
+
+    .ant-input-affix-wrapper,
+    .ant-input,
+    // .ant-select,
+    // .ant-select-selector,
+    .ant-input-number,
+    .ant-picker-outlined {
+        height: 24px !important;
+        font-size: $fs-11;
+        padding: 0px 10px;
+        // overflow-y: hidden !important;   
+
+        .ant-select-selection-search-input {
+            height: inherit !important;
+        }
+
+        .ant-picker-input {
+            input {
+                font-size: 11px !important;
+            }
+        }
+
+        .ant-select-selection-item {
+            font-size: 11px !important;
+        }
+
+        .ant-input-number-input {
+            height: inherit;
+        }
+
+        .ant-input {
+            height: inherit;
+        }
+    }
+
+    .ant-form-item {
+        .ant-form-item-label {
+            label {
+                font-size: $fs-11 !important;
+                padding-bottom: 0px ;
+            }
+        }
+    }
+
+    .login-btn.ant-btn {
+        height: 26px !important;
+
+        span {
+            font-size: $fs-12;
+        }
+    }
+
+    .ant-form-item-explain-error {
+        font-size: $fs-11;
+    }
+
+    .pnt-intake-form {
+        h3 {
+            font-size: 20px !important;
+        }
+
+        .ant-row.ant-row-border {
+            .col-md-4 {
+                h5 {
+                    font-size: 16px !important;
+                    margin-left: 0px !important;
+                    ;
+                    margin-right: 0px !important;
+                }
+
+                h6 {
+                    font-size: 15px !important;
+                }
+            }
+        }
+    }
+}
+
+@include tab-max {
+   
+    .pnt-intake-form {
+        .ph8 {
+            padding: 0px !important;
+            overflow-x: auto;
+        }
+
+        .ant-row.ant-row-border {
+            .col-md-4 {
+                h5 {
+                    margin-left: 0px !important;
+                    margin-right: 0px !important;
+                }
+            }
+        }
+    }
+
+}
+
+@include mob-hor {
+    .result-preview-header{
+        margin-top: 10px !important;
+    }
+    .medic-section {
+        .medication-title {
+            .col.d-flex {
+                .med-heading {
+                    width: 50%;
+                }
+            }
+        }
+
+        .medic-tbl-body.col.d-flex {
+            .col-md-6 {
+                width: 50%;
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 700px) {
+    .order-sections {
+        .row.pnt-demo {
+            .ant-form-item.col {
+                flex: 40% !important;
+            }
+        }
+
+        .session-ques-cont {
+            .col {
+                flex: 50% !important;
+                margin-bottom: 15px;
+            }
+
+            .sess-ck.col {
+                margin-bottom: 0px !important;
+            }
+
+            .sess-ck-t {
+                margin-bottom: 20px !important;
+            }
+        }
+    }
+
+}
+
+@include mob-hor-max {
+    .result-preview-header{
+        margin-top: 10px !important;
+    }
+    .ant-row.ant-row-border {
+        flex-direction: column !important;
+
+        .col-md-4 {
+            width: 100% !important;
+        }
+    }
+
+    .pnt-intake-form {
+        .card-body .row {
+            .col-md-4 {
+                padding-left: 0px !important;
+                padding-right: 0px !important;
+            }
+        }
+
+        .captcha-value.col-3 {
+            width: 200px !important;
+        }
+
+        .submit-btn-grp {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+
+            .col {
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            .ant-btn {
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:300px) and (max-width: 587px) {
+    .result-preview-header{
+        margin-top: 10px !important;
+    }
+    .medic-section {
+        .medication-title {
+            .col.d-flex {
+                .med-heading {
+                    width: 50%;
+                }
+            }
+        }
+
+        .medic-tbl-body.col.d-flex {
+            .col-md-6 {
+                width: 50%;
+            }
+        }
+    }
+
+    .order-sections {
+        .pnt-demo.row {
+            .ant-form-item.col {
+                flex: 100% !important;
+            }
+        }
+
+        .session-ques-cont {
+            .col {
+                flex: 100% !important;
+                margin-bottom: 15px;
+            }
+
+            .sess-ck.col {
+                margin-bottom: 0px !important;
+            }
+
+            .sess-ck-t {
+                margin-bottom: 20px !important;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1097.14px){
+    .ant-select{
+        .ant-select-arrow{
+            padding-bottom: 7px;
+        }
+    }
+    .result-preview-header{
+        .ant-select{
+            width: 150px !important;
+        }
+    }
+}
