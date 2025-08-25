@@ -54,6 +54,8 @@
     "lint:fix": "eslint '*/**/*.{js,ts,tsx,css,scss}' --quiet --fix",
     "format": "prettier --write \"src/**/*.js\"",
     "pc": "npm lint --fix && npm format"
+
+    
   },
   "eslintConfig": {
     "extends": [
@@ -94,3 +96,4 @@
   "author": "",
   "license": "ISC"
 }
+
